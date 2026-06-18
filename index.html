@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🐍 بازی مار پیشرفته</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>🐍 بازی مار</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span>🏆 امتیاز:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span>🥇 رکورد:</span>
+                    <span id="highScore">0</span>
+                </div>
+                <div class="score-item">
+                    <span>⚡ سرعت:</span>
+                    <span id="speed">1</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="gameOver" class="game-over hidden">
+                <h2>🎮 بازی تمام شد!</h2>
+                <p>امتیاز شما: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn">🔄 شروع مجدد</button>
+            </div>
+            <div id="startScreen" class="start-screen">
+                <h2>🐍 بازی مار پیشرفته</h2>
+                <p>با کیبورد یا سوایپ کنترل کن</p>
+                <button id="startBtn" class="btn">🎯 شروع بازی</button>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-row">
+                <button class="control-btn" data-direction="up">⬆️</button>
+            </div>
+            <div class="control-row">
+                <button class="control-btn" data-direction="left">⬅️</button>
+                <button class="control-btn" data-direction="down">⬇️</button>
+                <button class="control-btn" data-direction="right">➡️</button>
+            </div>
+        </div>
+        
+        <div class="difficulty">
+            <button class="diff-btn active" data-speed="100">آسان</button>
+            <button class="diff-btn" data-speed="70">متوسط</button>
+            <button class="diff-btn" data-speed="40">سخت</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
